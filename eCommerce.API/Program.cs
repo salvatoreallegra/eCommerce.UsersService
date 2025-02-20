@@ -1,5 +1,6 @@
 using eCommerce.Infrastructure;
 using eCommerce.Core;
+using eCommerce.API.Middlewares; // Add this using directive
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseExceptionHandlingMiddleware(); // Ensure this middleware is defined in the correct namespace
 app.UseRouting();
 
 app.UseHttpsRedirection();
