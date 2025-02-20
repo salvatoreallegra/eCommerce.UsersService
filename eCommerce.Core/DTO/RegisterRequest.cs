@@ -10,6 +10,6 @@ namespace eCommerce.Core.DTO
         string? Password,
         string? PersonName,
         GenderOptions Gender
-       );       
+       );   
     
 }
